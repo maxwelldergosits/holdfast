@@ -1,0 +1,437 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #f55d42 0%, #F5B642 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,1000 1000,800 1000,1000"/></svg>');
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.cta-primary {
+  background: #f55d42;
+  color: white;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 8px 25px rgba(245, 93, 66, 0.3);
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.cta-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(245, 93, 66, 0.4);
+  background: #e04e37;
+}
+
+/* Visual Section */
+.visual-section {
+  padding: 80px 0;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.phone-frame:hover {
+  transform: perspective(1000px) rotateY(0deg) scale(1.05);
+}
+
+.showcase {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width:100%;
+}
+
+.iphone-container {
+  margin-top:20px;
+  position: relative;
+  transform: perspective(1000px) rotateY(-5deg);
+  transition: transform 0.3s ease;
+}
+
+.iphone-container:hover {
+  transform: perspective(1000px) rotateY(0deg) scale(1.02);
+}
+
+.iphone {
+  width: 320px;
+  height: 694px;
+  background: #1d1d1f;
+  border-radius: 55px;
+  padding: 8px;
+  position: relative;
+  box-shadow: 
+  0 0 0 2px #333,
+  0 8px 25px rgba(0, 0, 0, 0.3),
+  0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* Power button */
+.power-button {
+  position: absolute;
+  right: -3px;
+  top: 180px;
+  width: 4px;
+  height: 80px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* Volume buttons */
+.volume-up {
+  position: absolute;
+  left: -3px;
+  top: 140px;
+  width: 4px;
+  height: 50px;
+  background: #333;
+  border-radius: 2px;
+}
+
+.volume-down {
+  position: absolute;
+  left: -3px;
+  top: 200px;
+  width: 4px;
+  height: 50px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* Action button (new in iPhone 15/16) */
+.action-button {
+  position: absolute;
+  left: -3px;
+  top: 90px;
+  width: 4px;
+  height: 30px;
+  background: #f55d42;
+  border-radius: 2px;
+}
+
+/* Screen container */
+.screen-container {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 47px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Dynamic Island */
+.dynamic-island {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 126px;
+  height: 37px;
+  background: #000;
+  border-radius: 19px;
+  z-index: 10;
+  border: 1px solid #333;
+}
+
+/* Screen content area */
+.screen {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+  border-radius: 47px;
+}
+
+/* Screenshot container - this is where you'll put your image */
+.screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 47px;
+}
+
+/* Home indicator */
+.home-indicator {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 134px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  z-index: 10;
+}
+
+
+/* Social Proof */
+.social-proof {
+  padding: 60px 0;
+  background: white;
+  text-align: center;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.testimonial {
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Features Section */
+.features {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.feature {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.feature h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.feature p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* FAQ Section */
+.faq {
+  padding: 80px 0;
+  background: white;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 40px auto 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid #eee;
+  padding: 25px 0;
+}
+
+.faq-question {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.faq-answer {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Founder's Note */
+.founders-note {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f55d42 0%, #F5B642 100%);
+  color: white;
+  text-align: center;
+}
+
+.founder-avatar {
+  width: 100px;
+  height: 100px;
+  background: #F5B642;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.founder-quote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  opacity: 0.95;
+}
+
+.founder-name {
+  font-weight: 600;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Floating elements */
+.floating-shape {
+  position: absolute;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
