@@ -480,6 +480,57 @@ body {
 }
 
 
+/* Target Audience Section */
+.target-audience {
+  padding: 120px 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.audience-item {
+  background: #ffffff;
+  padding: 48px 32px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.audience-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+.audience-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 24px;
+  display: block;
+  color: #f55d42;
+}
+
+.audience-item h3 {
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.audience-item p {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
 /* Problem & Solution Section */
 .problem-solution {
   padding: 120px 0;
