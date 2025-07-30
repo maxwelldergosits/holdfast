@@ -7,42 +7,84 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="icon.svg" alt="HoldFast" class="nav-logo">
+                <span class="nav-title">HoldFast</span>
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Turn Your Photos Into Memories</h1>
-                <p>Get 5 carefully selected photos printed and delivered monthly. No hassle, just beautiful memories in your hands.</p>
-                <a href="#cta" class="cta-primary">Start My Photo Journey</a>
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <h1>Turn Your Photos Into Memories</h1>
+                    <p>Get 5 carefully selected photos printed and delivered monthly. No hassle, just beautiful memories in your hands.</p>
+                    <a href="#cta" class="cta-primary">Start My Photo Journey</a>
+                </div>
+                <div class="hero-visual">
+                    <div class="iphone-container">
+                        <div class="iphone">
+                            <!-- Hardware buttons -->
+                            <div class="power-button"></div>
+                            <div class="volume-up"></div>
+                            <div class="volume-down"></div>
+                            <div class="action-button"></div>
+                            <!-- Screen -->
+                            <div class="screen-container">
+                                <div class="screen">
+                                    <img src="screenshot.png" alt="App Screenshot" class="screenshot">
+                                </div>
+                                <div class="home-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-array">
+                        <img src="photo_array.jpg" alt="Array of printed photos" class="photo-grid-image">
+                        <img src="arrow-loop.svg" alt="Array of printed photos" class="photo-grid-arrow">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Visual Section -->
-    <section class="visual-section">
+    <!-- Problem & Solution Section -->
+    <section class="problem-solution">
         <div class="container">
             <div class="section-header">
-                <h2>See It In Action</h2>
-                <p>Our smart algorithm picks your best photos from the past month, or you can choose your favorites. Either way, beautiful prints arrive at your door.</p>
+                <h2>Easy Photo Printing</h2>
+                <p>Printing photos is frustrating. We take the pain out of it for you. Life is busy, don't waste time fretting about where and when to get photos printed.</p>
             </div>
-            <div class="showcase">
-        <div class="iphone-container">
-            <div class="iphone">
-                <!-- Hardware buttons -->
-                <div class="power-button"></div>
-                <div class="volume-up"></div>
-                <div class="volume-down"></div>
-                <div class="action-button"></div>
-                <!-- Screen -->
-                <div class="screen-container">
-                    <div class="screen">
-                        <img src="screenshot.png" alt="App Screenshot" class="screenshot">
-                    </div>
-                    <div class="home-indicator"></div>
+            <div class="problem-solution-list">
+                    <div class="solution-item">
+                        <img src="solution-icon.svg" alt="Problem" class="solution-icon">
+                        <div class="solution-content">
+                            <strong>Photos every month.</strong> Everyone says they'll print photos later, but when do you actually do it? We make it easy to stop putting it off.
+                        </div>
                 </div>
-            </div>
-        </div>
-        </div>
+
+                    <div class="solution-item">
+                        <img src="solution-icon.svg" alt="Problem" class="solution-icon">
+                        <div class="solution-content">
+                          <strong>Combat Decision Fatigue.</strong> There are dozens of places on the internet that will print your photos however you want, but every decision makes it harder to print your photos. With us you'll only choose the photos, we handle everything else.
+                        </div>
+                    </div>
+
+                    <div class="solution-item">
+                        <img src="solution-icon.svg" alt="Problem" class="solution-icon">
+                        <div class="solution-content">
+                            <strong>Analysis paralysis.</strong> With thousands of photos, choosing which ones to print becomes overwhelming. Choosing photos every month makes it easier to limit the choices.
+                        </div>
+                    </div>
+                </div>
         </div>
     </section>
 
@@ -128,10 +170,86 @@
     <section class="hero" id="cta" style="padding: 60px 0;">
         <div class="container">
             <div class="hero-content">
-                <h2 style="font-size: 2.5rem; margin-bottom: 15px;">Ready to Print Your Memories?</h2>
+                <h2 style="font-size: 2.5rem; margin-bottom: 15px; text-align: center;">Ready to Print Your Memories?</h2>
                 <p style="margin-bottom: 30px;">Join our waitlist and be the first to turn your digital photos into beautiful keepsakes.</p>
-                <a href="#signup" class="cta-primary">Join the Waitlist - It's Free</a>
-                <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.8;">🎁 Early birds get a discount on their subscription!</p>
+                <a href="#signup" class="cta-secondary">Join the Waitlist - It's Free</a>
+                <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.8; text-align: center;">🎁 Early birds get a discount on their subscription!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that fits your photo printing needs</p>
+            </div>
+            <div class="billing-toggle">
+                <span class="billing-label">Monthly</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="billing-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="billing-label">Annual <span class="discount-badge">Save 20%</span></span>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Essential</h3>
+                        <div class="price-display">
+                            <span class="currency">$</span>
+                            <span class="price monthly-price">9.99</span>
+                            <span class="price annual-price">7.99</span>
+                            <span class="period monthly-period">/month</span>
+                            <span class="period annual-period">/month</span>
+                        </div>
+                        <p class="price-note annual-note">Billed annually at $95.88</p>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-highlight">
+                            <strong>5 premium prints</strong> delivered monthly
+                        </div>
+                        <ul class="feature-list">
+                            <li>Professional-grade printing</li>
+                            <li>4"x6" standard size</li>
+                            <li>Smart photo selection</li>
+                            <li>Full control over choices</li>
+                            <li>Free shipping included</li>
+                            <li>Cancel anytime</li>
+                        </ul>
+                    </div>
+                    <a href="#signup" class="cta-secondary plan-cta">Join Waitlist</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Premium</h3>
+                        <div class="price-display">
+                            <span class="currency">$</span>
+                            <span class="price monthly-price">14.99</span>
+                            <span class="price annual-price">11.99</span>
+                            <span class="period monthly-period">/month</span>
+                            <span class="period annual-period">/month</span>
+                        </div>
+                        <p class="price-note annual-note">Billed annually at $143.88</p>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-highlight">
+                            <strong>10 premium prints</strong> delivered monthly
+                        </div>
+                        <ul class="feature-list">
+                            <li>Professional-grade printing</li>
+                            <li>4"x6" standard size</li>
+                            <li>Smart photo selection</li>
+                            <li>Full control over choices</li>
+                            <li>Free shipping included</li>
+                            <li>Priority customer support</li>
+                            <li>Cancel anytime</li>
+                        </ul>
+                    </div>
+                    <a href="#signup" class="cta-primary plan-cta">Join Waitlist</a>
+                </div>
             </div>
         </div>
     </section>
@@ -185,8 +303,8 @@
     <section class="hero" style="padding: 60px 0;">
         <div class="container">
             <div class="hero-content">
-                <h2 style="font-size: 2rem; margin-bottom: 15px;">Don't Let Your Memories Stay Digital Forever</h2>
-                <a href="#signup" class="cta-primary">Start Printing My Memories</a>
+                <h2 style="font-size: 2rem; margin-bottom: 15px; text-align: center;">Don't Let Your Memories Stay Digital Forever</h2>
+                <a href="#signup" class="cta-secondary">Start Printing My Memories</a>
             </div>
         </div>
     </section>
@@ -211,8 +329,20 @@
             observer.observe(el);
         });
 
+        // Billing toggle functionality
+        const billingToggle = document.getElementById('billing-toggle');
+        const pricingSection = document.querySelector('.pricing');
+        
+        billingToggle.addEventListener('change', function() {
+            if (this.checked) {
+                pricingSection.classList.add('billing-annual');
+            } else {
+                pricingSection.classList.remove('billing-annual');
+            }
+        });
+
         // CTA button clicks (for validation tracking)
-        document.querySelectorAll('.cta-primary').forEach(button => {
+        document.querySelectorAll('.cta-primary, .cta-secondary').forEach(button => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
                 // Here you would typically track the click and show a signup form

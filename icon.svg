@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 60">
+  <defs>
+    <style>
+      :root {
+        --primary-color: #f55d42;
+        --secondary-color: #F5B642;
+        --background-color: #EEE
+      }
+    </style>
+
+  </defs>
+  <g>
+    <path
+       d="M 4.3945312,50 V 7.0507812 H 13.066406 V 23.955078 H 30.058594 V 7.0507812 h 8.671875 V 50 H 30.058594 V 31.220703 H 13.066406 V 50 Z"
+       id="text1"
+       aria-label="H"
+       fill="var(--primary-color)"/>
+    </g>
+    <g transform="translate(34)">
+    <path
+       d="M 4.4238281,50 V 7.0507812 H 33.867187 V 14.316406 H 13.095703 v 10.166016 h 17.929688 v 7.265625 H 13.095703 V 50 Z"
+       id="text3"
+       aria-label="F"
+       fill="var(--secondary-color)"/>
+      <g transform="translate(13.5,50)">
+        <text transform="" style="text-anchor:start;" x="0" y="0" font-size="8" font-weight="bold" font-family="Arial" fill="var(--secondary-color)">AST</text>
+      </g>
+    </g>
+</svg>

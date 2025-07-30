@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   sodipodi:docname="arrow-loop.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.52587922"
+     inkscape:rotation="1"
+     inkscape:cx="185.58331"
+     inkscape:cy="662.41408"
+     inkscape:window-width="2992"
+     inkscape:window-height="1623"
+     inkscape:window-x="8"
+     inkscape:window-y="33"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="ConcaveTriangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Concave triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="path7" />
+    </marker>
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.165;stroke-dasharray:8.66, 4.33001;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#ConcaveTriangle)"
+       d="M -0.00878075,285.6616 C 28.144053,264.56819 56.804556,244.15236 85.93955,224.43775 c 23.74112,-16.06477 48.67096,-32.57403 62.90378,-57.45664 9.91131,-17.32751 13.83611,-38.28257 9.4446,-57.7554 -4.39152,-19.472837 -17.42152,-37.120011 -35.39142,-45.812507 -8.98495,-4.346249 -19.0682,-6.452596 -29.032599,-5.87826 -9.964402,0.574336 -19.784552,3.849052 -27.994135,9.525488 -8.209582,5.676437 -14.767926,13.755966 -18.462558,23.027905 -3.694632,9.27194 -4.484006,19.706534 -2.046401,29.385234 3.12613,12.41254 11.48257,23.23748 22.181601,30.26419 10.699031,7.0267 23.598101,10.37673 36.397842,10.4791 15.98726,0.12786 31.97849,-4.7643 45.15776,-13.81503 13.17928,-9.05072 23.48695,-22.21903 29.10793,-37.18612 5.62098,-14.967079 6.52982,-31.665176 2.56648,-47.153912 C 176.80909,46.573062 167.99152,32.363809 155.87241,21.93615"
+       id="path4"
+       inkscape:path-effect="#path-effect4"
+       inkscape:original-d="M -0.00878075,285.6616 C 28.484687,265.92731 57.454863,244.67509 85.93955,224.43775 c 28.48469,-20.23734 41.60927,-37.79553 62.90378,-57.45664 21.29452,-19.66112 -68.985414,-31.50401 -103.482513,-47.50754 -34.497099,-16.00352 39.21479,26.8239 58.579443,40.74329 19.36465,13.91938 34.62143,-92.187141 51.93215,-138.28071" />
+  </g>
+</svg>
