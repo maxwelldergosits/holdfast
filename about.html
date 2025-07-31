@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About HoldFast - Our Story</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="icon.svg" alt="HoldFast" class="nav-logo">
+                <a href="index.html" class="nav-title" style="text-decoration: none; color: inherit;">HoldFast</a>
+            </div>
+            <div class="nav-links">
+                <a href="about.html" class="nav-link">About</a>
+                <a href="index.html#pricing" class="nav-link">Pricing</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h1>About HoldFast</h1>
+                <p>We believe your most precious memories deserve more than a digital existence. That's why we created HoldFast – to help you transform your favorite photos into tangible keepsakes you can hold, share, and treasure forever.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder's Note -->
+    <section class="founders-note">
+        <div class="container">
+            <div class="founder-avatar">MD</div>
+            <div class="founder-quote">"I created HoldFast because I was tired of having thousands of photos on my phone but none on my walls. The photos that bring me the most joy are the ones I can physically hold – the ones that transport me back to the moment they were taken. I wanted to make it easier for everyone to experience that same joy."</div>
+            <div class="founder-name">- Maxwell Dergosits, Founder</div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="hero" style="padding: 80px 0; background: #f9fafb;">
+        <div class="container">
+            <div class="hero-content" style="text-align: center;">
+                <h2 style="font-size: 2.25rem; margin-bottom: 16px;">Ready to Start Your Journey?</h2>
+                <p style="margin-bottom: 32px;">Join thousands who've already discovered the joy of printed memories.</p>
+                <a href="index.html" class="cta-primary">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 HoldFast. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+                    <a href="terms.html" class="footer-link">Terms & Conditions</a>
+                    <a href="cookies.html" class="footer-link">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.feature, .audience-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="0c77efcf-1292-4780-86e6-07d08c8ccd40"></script>
+</html>
