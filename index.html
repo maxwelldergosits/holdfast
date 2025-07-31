@@ -356,15 +356,68 @@
             }
         });
 
-        // CTA button clicks (for validation tracking)
+        // CTA button clicks - show email modal
         document.querySelectorAll('.cta-primary, .cta-secondary').forEach(button => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
-                // Here you would typically track the click and show a signup form
-                alert('Signup form would appear here! This is where you\'d collect emails for validation.');
+                showEmailModal();
             });
         });
+
+        // Email modal functionality
+        function showEmailModal() {
+            document.getElementById('emailModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideEmailModal() {
+            document.getElementById('emailModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('click', (e) => {
+            if (e.target.id === 'emailModal') {
+                hideEmailModal();
+            }
+        });
+
+        // Handle form submission
+        document.getElementById('waitlistForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            
+            // Here you would typically send to your email service
+            console.log('Waitlist signup:', { email });
+            
+            // Show success message
+            document.querySelector('.modal-content').innerHTML = `
+                <h2>🎉 You're on the list!</h2>
+                <p>Thanks for joining our waitlist! We'll send you updates about HoldFast and let you know when we launch.</p>
+                <button onclick="hideEmailModal()" class="cta-primary" style="margin-top: 20px;">Close</button>
+            `;
+        });
     </script>
+
+    <!-- Email Signup Modal -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideEmailModal()">&times;</span>
+            <h2>Join the HoldFast Waitlist</h2>
+            <p>Be the first to know when we launch and get early bird pricing!</p>
+            
+            <form id="waitlistForm" class="waitlist-form">
+                <div class="form-group">
+                    <label for="emailInput">Email Address</label>
+                    <input type="email" id="emailInput" name="email" required placeholder="your@email.com">
+                </div>
+                
+                <button type="submit" class="cta-primary">Join Waitlist</button>
+            </form>
+            
+            <p class="privacy-note">We respect your privacy. No spam, just updates about HoldFast.</p>
+        </div>
+    </div>
 </body>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="0c77efcf-1292-4780-86e6-07d08c8ccd40"></script>
 </html>
