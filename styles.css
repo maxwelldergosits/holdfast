@@ -480,6 +480,147 @@ body {
 }
 
 
+/* How It Works Section */
+.how-it-works {
+  padding: 120px 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.step {
+  text-align: center;
+  padding: 32px 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+.step-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  height: 80px;
+}
+
+.step-icon {
+  width: 48px;
+  height: 48px;
+  color: #f55d42;
+  fill: #f55d42;
+}
+
+.step-number {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 28px;
+  height: 28px;
+  background: #f55d42;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  box-shadow: 0 2px 8px rgba(245, 93, 66, 0.3);
+}
+
+.step h3 {
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.step p {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.step-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.css-arrow {
+  width: 0;
+  height: 0;
+  border-left: 12px solid #d1d5db;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  opacity: 0.7;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+  
+  .step-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .css-arrow {
+    border-left-width: 8px;
+    border-top-width: 6px;
+    border-bottom-width: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .step {
+    padding: 24px 20px;
+  }
+  
+  .steps-grid {
+    gap: 24px;
+  }
+  
+  .step-visual {
+    height: 60px;
+  }
+  
+  .step-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .step-number {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+  }
+}
+
 /* Target Audience Section */
 .target-audience {
   padding: 120px 0;
