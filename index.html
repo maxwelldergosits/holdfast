@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="0c77efcf-1292-4780-86e6-07d08c8ccd40"></script>
     <!-- Navigation -->
     <nav class="navbar">
       <div class="container">
@@ -81,7 +82,7 @@
               <div class="step-number">2</div>
             </div>
             <h3>We Print & Package</h3>
-            <p>We profressionally print and package your photos, every month.</p>
+            <p>We professionally print and package your photos, every month.</p>
           </div>
           <div class="step-arrow">
             <div class="css-arrow"></div>
@@ -119,7 +120,7 @@
             </div>
           </div>
           <div class="solution-item">
-            <object data="icons/cloud.svg" type="image/svg+xml" class="solution-icon" aria-label="Lightbulb"></object>
+            <object data="icons/cloud.svg" type="image/svg+xml" class="solution-icon" aria-label="Cloud"></object>
             <div class="solution-content">
               <strong>You're in charge.</strong> With cloud providers, if you stop paying for their subscription they delete your photos. With HoldFast your photos are yours forever, once printed you keep them for decades to come.
             </div>
@@ -187,7 +188,7 @@
           </div>
           <div class="feature">
             <object data="icons/device-mobile.svg" type="image/svg+xml" class="feature-icon" aria-label="Mobile Device"></object>
-            <h3>Mobile App </h3>
+            <h3>Mobile App</h3>
             <p>Use our mobile app to select your prints. Edit your selection until the printing date.</p>
           </div>
         </div>
@@ -271,7 +272,7 @@
           </div>
           <div class="faq-item">
             <div class="faq-question">Can I skip a month or cancel anytime?</div>
-            <div class="faq-answer">You can pause your subscription anytime or cancel with no penalties. There are no long term contracts</div>
+            <div class="faq-answer">You can pause your subscription anytime or cancel with no penalties. There are no long-term contracts.</div>
           </div>
           <div class="faq-item">
             <div class="faq-question">Do you store my photos?</div>
@@ -280,10 +281,10 @@
           <div class="faq-item">
             <div class="faq-question">How long does shipping take?</div>
             <div class="faq-answer">Prints are typically delivered within 5-7 business days within the US. We ship using USPS first-class mail to keep the subscription price down.</div>
-            <div class="faq-item">
-              <div class="faq-question">Can I get more than 5 photos a month?</div>
-              <div class="faq-answer">Yes. Each 5 additional photos cost $2. 10 Photos are $12/month, 15 photos are $14/month, etc...</div>
-            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Can I get more than 5 photos a month?</div>
+            <div class="faq-answer">Yes. Each additional 5 photos cost $2. 10 photos are $12/month, 15 photos are $14/month, etc...</div>
           </div>
         </div>
       </div>
@@ -293,7 +294,7 @@
     <section class="founders-note">
       <div class="container">
         <img src="avatar.jpeg" alt="Maxwell Dergosits" class="founder-avatar">
-        <div class="founder-quote">"I created HoldFast to make it easier to hold memories in your hand. I take pictures almost everywhere I go, visting my parents, hiking in the wilderness, or just spending time with my friends, but I rarely take the time to look back at those momements. I got tired of letting those memories fade away and started making an effort to print out my favorite ones, and now I get to remember those moments anytime I see them on the wall. This process was annoying, sifting through a year of photos was hard, finding a good printer was hard. Each of these steps added friction that doesn't need to be there. That's why I made HoldFast, so I could just focus on the precious moments."</div>
+        <div class="founder-quote">"I created HoldFast to make it easier to hold memories in your hand. I take pictures almost everywhere I go, visiting my parents, hiking in the wilderness, or just spending time with my friends, but I rarely take the time to look back at those moments. I got tired of letting those memories fade away and started making an effort to print out my favorite ones, and now I get to remember those moments anytime I see them on the wall. This process was annoying, sifting through a year of photos was hard, finding a good printer was hard. Each of these steps added friction that doesn't need to be there. That's why I made HoldFast, so I could just focus on the precious moments."</div>
         <div class="founder-name">- Maxwell Dergosits, Founder</div>
       </div>
     </section>
@@ -326,18 +327,6 @@
       // Observe elements for animation
       document.querySelectorAll('.feature, .testimonial, .faq-item').forEach(el => {
         observer.observe(el);
-      });
-
-      // Billing toggle functionality
-      const billingToggle = document.getElementById('billing-toggle');
-      const pricingSection = document.querySelector('.pricing');
-
-      billingToggle.addEventListener('change', function() {
-        if (this.checked) {
-          pricingSection.classList.add('billing-annual');
-        } else {
-          pricingSection.classList.remove('billing-annual');
-        }
       });
 
       // CTA buttons now use inline onclick handlers
@@ -440,5 +429,4 @@
       </div>
     </footer>
   </body>
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="0c77efcf-1292-4780-86e6-07d08c8ccd40"></script>
 </html>
