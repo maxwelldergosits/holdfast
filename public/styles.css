@@ -479,6 +479,62 @@ body {
   z-index: 10;
 }
 
+/* Photo Spread Section */
+.photo-spread-section {
+  padding: 80px 0 60px 0;
+  background: #f9fafb;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-spread {
+  position: relative;
+  height: 400px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.printed-photo {
+  position: absolute;
+  width: 200px;
+  height: 134px;
+  object-fit: cover;
+  border: 8px solid #ffffff;
+  border-radius: 2px;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    0 8px 25px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.printed-photo:hover {
+  transform: scale(1.05) translateY(-5px) !important;
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.25),
+    0 15px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  z-index: 10 !important;
+}
+
+.photo-spread .photo-1 {
+  transform: rotate(-8deg) translateX(-40px) translateY(-20px);
+  z-index: 3;
+}
+
+.photo-spread .photo-2 {
+  transform: rotate(12deg) translateX(30px) translateY(15px);
+  z-index: 2;
+}
+
+.photo-spread .photo-3 {
+  transform: rotate(-3deg) translateX(-10px) translateY(25px);
+  z-index: 1;
+}
 
 /* How It Works Section */
 .how-it-works {
@@ -1385,6 +1441,34 @@ input:checked + .slider:before {
   .photo-stack-hero .photo-3 {
     top: 8px;
     left: 12px;
+  }
+
+  /* Photo spread mobile styles */
+  .photo-spread-section {
+    padding: 50px 0 40px 0;
+  }
+
+  .photo-spread {
+    height: 300px;
+    max-width: 400px;
+  }
+
+  .printed-photo {
+    width: 150px;
+    height: 100px;
+    border: 6px solid #ffffff;
+  }
+
+  .photo-spread .photo-1 {
+    transform: rotate(-6deg) translateX(-30px) translateY(-15px);
+  }
+
+  .photo-spread .photo-2 {
+    transform: rotate(10deg) translateX(20px) translateY(10px);
+  }
+
+  .photo-spread .photo-3 {
+    transform: rotate(-2deg) translateX(-5px) translateY(20px);
   }
 }
 
