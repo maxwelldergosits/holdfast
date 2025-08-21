@@ -25,7 +25,9 @@ body {
   z-index: 1000;
   padding: 16px 0;
 }
-
+.arrow {
+display:none;
+}
 .navbar .container {
   display: flex;
   justify-content: space-between;
@@ -249,23 +251,14 @@ body {
 }
 
 .photo-1 {
-  top: 0;
-  left: 0;
-  transform: rotate(-5deg);
   background: linear-gradient(45deg, #f3f4f6, #e5e7eb);
 }
 
 .photo-2 {
-  top: 8px;
-  left: 10px;
-  transform: rotate(2deg);
   background: linear-gradient(45deg, #e5e7eb, #d1d5db);
 }
 
 .photo-3 {
-  top: 16px;
-  left: 20px;
-  transform: rotate(8deg);
   background: linear-gradient(45deg, #d1d5db, #9ca3af);
 }
 
@@ -381,49 +374,6 @@ body {
   0 20px 60px rgba(0, 0, 0, 0.2);
 }
 
-/* Power button */
-.power-button {
-  position: absolute;
-  right: -3px;
-  top: 180px;
-  width: 4px;
-  height: 80px;
-  background: #333;
-  border-radius: 2px;
-}
-
-/* Volume buttons */
-.volume-up {
-  position: absolute;
-  left: -3px;
-  top: 140px;
-  width: 4px;
-  height: 50px;
-  background: #333;
-  border-radius: 2px;
-}
-
-.volume-down {
-  position: absolute;
-  left: -3px;
-  top: 200px;
-  width: 4px;
-  height: 50px;
-  background: #333;
-  border-radius: 2px;
-}
-
-/* Action button (new in iPhone 15/16) */
-.action-button {
-  position: absolute;
-  left: -3px;
-  top: 90px;
-  width: 4px;
-  height: 30px;
-  background: #f55d42;
-  border-radius: 2px;
-}
-
 /* Screen container */
 .screen-container {
   width: 100%;
@@ -513,18 +463,24 @@ body {
   z-index: 10 !important;
 }
 
+
 .hero-visual .photo-spread .photo-1 {
-  transform: rotate(-6deg) translateX(-25px) translateY(-12px);
-  z-index: 3;
+  z-index: 5;
 }
 
 .hero-visual .photo-spread .photo-2 {
-  transform: rotate(10deg) translateX(20px) translateY(10px);
-  z-index: 2;
+  z-index: 4;
 }
 
 .hero-visual .photo-spread .photo-3 {
-  transform: rotate(-2deg) translateX(-5px) translateY(15px);
+  z-index: 3;
+}
+
+.hero-visual .photo-spread .photo-4 {
+  z-index: 2;
+}
+
+.hero-visual .photo-spread .photo-5 {
   z-index: 1;
 }
 
@@ -1285,22 +1241,6 @@ input:checked + .slider:before {
     text-align: center;
   }
   
-  .hero-visual {
-    gap: 20px;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .hero-visual .photo-spread {
-    display: flex;
-  }
-
-  .hero-visual .photo-array {
-    display: none; /* Hide the original photo array on tablet */
-  }
-  
   .iphone {
     width: 280px;
     height: 608px;
@@ -1390,17 +1330,15 @@ input:checked + .slider:before {
   .testimonials {
     grid-template-columns: 1fr;
   }
-  
+
   .hero-visual {
-    gap: 15px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    gap: 35px;
+    display: flex;
   }
 
   .hero-visual .photo-spread {
     display: flex;
+    width: 100px;
   }
 
   .hero-visual .photo-array {
@@ -1413,27 +1351,63 @@ input:checked + .slider:before {
     border: 4px solid #ffffff;
   }
 
+  .arrow {
+    display: flex;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+}
+
+
   .hero-visual .photo-spread .photo-1 {
-    transform: rotate(-5deg) translateX(-20px) translateY(-10px);
+    transform: rotate(-20deg) translateX(0px) translateY(-50px);
   }
 
   .hero-visual .photo-spread .photo-2 {
-    transform: rotate(8deg) translateX(15px) translateY(8px);
+    transform: rotate(-10deg) translateX(0px) translateY(-25px);
   }
 
   .hero-visual .photo-spread .photo-3 {
-    transform: rotate(-1deg) translateX(-3px) translateY(12px);
+    transform: rotate(0deg) translateX(0px) translateY(0px);
   }
-  
+
+  .hero-visual .photo-spread .photo-4 {
+    transform: rotate(10deg) translateX(0px) translateY(25px);
+  }
+  .hero-visual .photo-spread .photo-5 {
+    transform: rotate(20deg) translateX(0px) translateY(50px);
+  }
+
   .iphone {
-    width: 240px;
-    height: 520px;
+    width: 120px;
+    height: 270px;
+    border-radius: 20px;
+    padding:3px;
   }
-  
+
+.screenshot  {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 17px;
+  overflow: hidden;
+  position: relative;
+}
+
+.screen {
+  border-radius: 17px;
+}
+  .screen-container {
+  border-radius: 17px;
+  }
   .photo-grid-image {
     max-width: 120px;
+    border-radius: 10px;
   }
-  
   .photo-grid-arrow {
     width: 120px;
   }
