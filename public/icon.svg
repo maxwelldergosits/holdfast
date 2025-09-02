@@ -1,27 +1,40 @@
 <?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 60">
-  <defs>
-    <style>
-      :root {
-        --primary-color: #f55d42;
-        --secondary-color: #F5B642;
-        --background-color: #EEE
-      }
-    </style>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+<defs>
+  <linearGradient id="fade" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+  <stop offset="0%" style="stop-color:#f55d42;stop-opacity:1" />
+  <stop offset="100%" style="stop-color:#f5b641;stop-opacity:1" />
+  </linearGradient>
   </defs>
-  <g>
-    <path
-       d="M 4.3945312,50 V 7.0507812 H 13.066406 V 23.955078 H 30.058594 V 7.0507812 h 8.671875 V 50 H 30.058594 V 31.220703 H 13.066406 V 50 Z"
-       id="text1"
-       aria-label="H"
-       fill="#f55d42"/>
-    </g>
-    <g transform="translate(34)">
-    <path
-       d="M 4.4238281,50 V 7.0507812 H 33.867187 V 14.316406 H 13.095703 v 10.166016 h 17.929688 v 7.265625 H 13.095703 V 50 Z"
-       id="text3"
-       aria-label="F"
-       fill="#F5B642"/>
-    </g>
+  <rect x="0" y="0" width="1000" height="1000" stroke="none" fill="none" ry="20" rx="20"/>
+<rect x="150" y="150" width="600" height="600" stroke="url(#fade)" stroke-width="30" fill="none" ry="20" rx="20"/>
+<path d="
+  M750 200
+  l30 0
+  a20,20 0 0 1 20,20
+  l0 560
+  a20,20 0 0 1 -20,20
+  l-560 0
+  a20,20 0 0 1 -20,-20
+  l0 -30"
+  stroke="url(#fade)" stroke-width="30" fill="none"/>
+<path d="
+  M800 250
+  l30 0
+  a20,20 0 0 1 20,20
+  l0 560
+  a20,20 0 0 1 -20,20
+  l-560 0
+  a20,20 0 0 1 -20,-20
+  l0 -30"
+  stroke="url(#fade)" stroke-width="30" fill="none" />
+<path d="M600.0 450.0 L503.0475119791302 684.0640114857985" stroke="url(#fade)" stroke-width="30" fill="none"/>
+<path d="M556.0660171779821 556.0660171779821 L322.0020056921836 653.0185051988518" stroke="url(#fade)" stroke-width="30" fill="none"/>
+<path d="M450.0 600.0 L215.93598851420154 503.0475119791302" stroke="url(#fade)" stroke-width="30" fill="none"/>
+<path d="M343.93398282201787 556.0660171779821 L246.9814948011482 322.00200569218356" stroke="url(#fade)" stroke-width="30" fill="none"/>
+<path d="M300.0 450.0 L396.9524880208697 215.93598851420148" stroke="url(#fade)" stroke-width="30" fill="none"/>
+<path d="M343.93398282201787 343.93398282201787 L577.9979943078164 246.98149480114824" stroke="url(#fade)" stroke-width="30" fill="none"/>
+<path d="M450.0 300.0 L684.0640114857986 396.9524880208697" stroke="url(#fade)" stroke-width="30" fill="none"/>
+<path d="M556.0660171779821 343.93398282201787 L653.0185051988518 577.9979943078164" stroke="url(#fade)" stroke-width="30" fill="none"/>
+<circle cx="450" cy="450" r="240" stroke="url(#fade)" stroke-width="30" fill="none"/>
 </svg>

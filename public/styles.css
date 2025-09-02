@@ -42,8 +42,8 @@ display:none;
 }
 
 .nav-logo {
-  width: 32px;
-  height: 32px;
+  width: 64px;
+  height: 64px;
 }
 
 .nav-title {
@@ -80,14 +80,14 @@ display:none;
 .hero {
   background: #ffffff;
   color: #1a1a1a;
-  padding: 120px 0;
+  padding: 120px 80px;
   position: relative;
   border-bottom: 1px solid #e5e7eb;
 }
 
 
 .hero-layout {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
@@ -1277,6 +1277,14 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 0;
+  }
+
+  .navbar {
+    padding: 6px 0;
+  }
+
   .pricing-grid {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -1303,24 +1311,42 @@ input:checked + .slider:before {
   }
   
   .nav-logo {
-    width: 28px;
-    height: 28px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero {
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 90px;
+  }
+
+  .hero .container {
+    width: 100%;
+  }
+
+  .hero-layout {
+    gap: 30px;
+    display: grid;
+    grid-template-rows: auto auto;
+    align-content: center;
   }
 
   .hero h1 {
     font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 16px;
   }
 
   .hero p {
     font-size: 1.1rem;
+    margin-bottom: 30px;
   }
 
   .container {
     padding: 0 15px;
-  }
-  
-  .hero-layout {
-    gap: 40px;
   }
 
   .features-grid {
@@ -1332,7 +1358,7 @@ input:checked + .slider:before {
   }
 
   .hero-visual {
-    gap: 35px;
+    gap: 25px;
     display: flex;
   }
 
@@ -1451,6 +1477,84 @@ input:checked + .slider:before {
     left: 12px;
   }
 
+}
+
+/* Mobile phones - aggressive spacing reduction */
+@media (max-width: 480px) {
+  body {
+    padding-top: 0;
+  }
+
+  .navbar {
+    padding: 4px 0;
+  }
+
+  .nav-title {
+    font-size: 1.1rem;
+  }
+  
+  .nav-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+  }
+
+  .hero {
+    padding: 10px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+  }
+
+  .hero .container {
+    width: 100%;
+  }
+
+  .hero-layout {
+    gap: 15px;
+    min-height: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.05;
+    margin-bottom: 12px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .hero-visual {
+    padding-top:50px;
+    gap: 15px;
+  }
+
+  .cta-primary, .cta-secondary {
+    padding: 14px 28px;
+    font-size: 1rem;
+    min-height: 48px;
+    margin-bottom: 10px;
+  }
 }
 
 /* Email Modal */
