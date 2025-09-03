@@ -33,41 +33,43 @@ otherContent = """
       </g>
       """
 
-strokeWidth = 9
+strokeWidth = 8
 contentScale = .5
 stroke = "url(#fade)"
 svg = f"""
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
-    <linearGradient id="fade" x1="0%" y1="0%" x2="25%" y2="0%" gradientUnits="userSpaceOnUse">
+    <linearGradient id="fade" x1="5%" y1="0%" x2="25%" y2="0%" gradientUnits="userSpaceOnUse">
     <stop offset="0%" style="stop-color:#f55d42;stop-opacity:1" />
     <stop offset="100%" style="stop-color:#f5b641;stop-opacity:1" />
     </linearGradient>
   </defs>
   <g transform="scale(3.9)">
-    <!--
-      <g id="frame">
-      <path d="M60,137 l0,-117 l140,0 l0,125 h-40" stroke="{stroke}" fill="none" stroke-width="{strokeWidth}"  stroke-linecap="round" stroke-linejoin="round" />
-      </g>
-      -->
-      <!--
-      <g id="hand" >
-        <path d="M48,208H16a8,8,0,0,1-8-8V160a8,8,0,0,1,8-8H48"
-          stroke="{stroke}" stroke-linecap="round" stroke-linejoin="round" stroke-width="{strokeWidth}" fill="none"/>
-        <path d="M112,160h32l67-15.41a16.61,16.61,0,0,1,21,16h0a16.59,16.59,0,0,1-9.18,14.85L184,192l-64,16H48V152l25-25a24,24,0,0,1,17-7H140a20,20,0,0,1,20,20h0a20,20,0,0,1-20,20Z"
-          fill="none" stroke="{stroke}" stroke-linecap="round" stroke-linejoin="round" stroke-width="{strokeWidth}"/>
-      </g>
-      -->
       <g id="grab" transform="translate(0 0)">
-      <path d="M184,128h0a82.38,82.38,0,0,1,40,70.65V240" fill="none" stroke="{stroke}" stroke-linecap="round" stroke-linejoin="round" stroke-width="{strokeWidth}"/>
-      <path d="M160.94,240l-22.26-34a20,20,0,0,1,34.64-20L184,202.31V64a8,8,0,0,0-8-8H30a8,8,0,0,0,-8,8V208a8,8,0,0,0,8,8h80" fill="none" stroke="{stroke}" stroke-linecap="round" stroke-linejoin="round" stroke-width="{strokeWidth}"/>
+      <path d="
+      M128 96
+      m70,20
+      h0
+      a82.38,82.38,0,0,1,40,70.65
+      v41.35
+      m-61,0
+      l-22.26 -34
+      a20,20,0,0,1,34.64 -20
+      l6.58 16.31
+      v-160
+      a8,8,0,0,0-8-8
+      h-120
+      a8,8,0,0,0,-8,8
+      v180
+      a8,8,0,0,0,8,8
+      h100
+      " fill="none" stroke="{stroke}" stroke-linecap="round" stroke-linejoin="round" stroke-width="{strokeWidth}"/>
       </g>
       <g id="photo" fill="{stroke}" fill-rule="nonzero" >
-        <path d="M128,0 V256" stroke="black"/>
         <path
         d="
-        M168,160
+        M168,156
         h-80
         a8,8,0,0,1-8-8
         v-56
