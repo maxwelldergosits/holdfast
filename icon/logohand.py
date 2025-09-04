@@ -9,7 +9,7 @@ themeColorB = "#D3F1DF"
 
 stroke = "url(#fade)"
 svg = f"""
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="fade" x1="5%" y1="0%" x2="25%" y2="0%" gradientUnits="userSpaceOnUse">
@@ -18,7 +18,7 @@ svg = f"""
     </linearGradient>
   </defs>
   <!-- <rect x="0" y="0" height="100%" width="100%" fill="none" stroke="black" stroke-width="10"/> -->
-  <g transform="scale(3.9)">
+  <g transform="scale(4)">
       <g id="grab" transform="translate(0 0)">
       <path d="
       M128 96
