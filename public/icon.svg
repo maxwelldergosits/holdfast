@@ -7,6 +7,7 @@
     <stop offset="100%" style="stop-color:#f5b641;stop-opacity:1" />
     </linearGradient>
   </defs>
+  <!-- <rect x="0" y="0" height="100%" width="100%" fill="none" stroke="black" stroke-width="10"/> -->
   <g transform="scale(3.9)">
       <g id="grab" transform="translate(0 0)">
       <path d="
@@ -19,20 +20,21 @@
       l-22.26 -34
       a20,20,0,0,1,34.64 -20
       l6.58 16.31
-      v-160
+      v-120
       a8,8,0,0,0-8-8
       h-120
       a8,8,0,0,0,-8,8
-      v180
+      v120
       a8,8,0,0,0,8,8
-      h100
+      h87
       " fill="none" stroke="url(#fade)" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
       </g>
       <g id="photo" fill="url(#fade)" fill-rule="nonzero" >
         <path
         d="
-        M168,156
-        h-80
+        M168,170
+        m-10 0
+        h-70
         a8,8,0,0,1-8-8
         v-56
         a8,8,0,0,1,8,-8
@@ -43,9 +45,8 @@
         h16
         a8,8,0,0,1,8,8
         v56
-        a8,8,0,0,1,-8,8
         z
-        m-65,-36
+        m-55,-36
         a 25 25 0 0 0 50 0
         a 25 25 0 0 0 -50 0
         m9,0
