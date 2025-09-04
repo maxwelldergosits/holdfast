@@ -22,6 +22,17 @@
       </div>
     </nav>
 
+    <!-- Sticky CTA Bar -->
+    <div id="stickyCTA" class="sticky-cta">
+      <div class="sticky-cta-content">
+        <div class="sticky-cta-brand">
+          <img src="icon.svg" alt="HoldFast">
+          <span>HoldFast</span>
+        </div>
+        <a href="#" class="sticky-cta-button" onclick="showEmailModal(); return false;">Join Our Waitlist Now</a>
+      </div>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
@@ -331,6 +342,47 @@
       document.querySelectorAll('.feature, .testimonial, .faq-item').forEach(el => {
         observer.observe(el);
       });
+
+      // Sticky CTA visibility logic with scroll direction
+      const stickyCTA = document.getElementById('stickyCTA');
+      const navbar = document.querySelector('.navbar');
+      const heroSection = document.querySelector('.cta-primary');
+      const heroCTA = document.querySelector('.hero .cta-primary');
+      
+      let lastScrollTop = 0;
+      let scrollingUp = false;
+      
+      function checkStickyCTAVisibility() {
+        const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const heroCTARect = heroCTA.getBoundingClientRect();
+        const navbarHeight = navbar.offsetHeight;
+        
+        // Determine scroll direction
+        scrollingUp = currentScrollTop < lastScrollTop;
+        lastScrollTop = currentScrollTop;
+        
+        // Show sticky CTA when:
+        // 1. Hero CTA is behind/above the navbar (top < navbar height) AND
+        // 2. User is scrolling up OR has scrolled past hero section
+        const heroCTABehindNavbar = heroCTARect.top < navbarHeight;
+        const heroRect = heroSection.getBoundingClientRect();
+        const pastHero = heroRect.bottom < navbarHeight;
+        
+        if (heroCTABehindNavbar && (scrollingUp || pastHero)) {
+          stickyCTA.classList.add('show');
+          navbar.classList.add('hidden');
+        } else if (!heroCTABehindNavbar || (!scrollingUp && !pastHero)) {
+          stickyCTA.classList.remove('show');
+          navbar.classList.remove('hidden');
+        }
+      }
+      
+      // Check on scroll and resize
+      window.addEventListener('scroll', checkStickyCTAVisibility);
+      window.addEventListener('resize', checkStickyCTAVisibility);
+      
+      // Initial check
+      checkStickyCTAVisibility();
 
       // CTA buttons now use inline onclick handlers
 
